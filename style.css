@@ -48,9 +48,7 @@
   max-height: 45px;
   width: 150px;
 }
-.gameInfo {
-  /* font-size: 25px; */
-}
+
 #scoreBoard {
   display: inline-flex;
 }
