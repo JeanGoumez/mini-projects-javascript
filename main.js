@@ -167,7 +167,7 @@ const startGame = () => {
   startButton.innerHTML = "Pause";
   setGame();
   gameOverSign.style.display = "none";
-  startButton.disabled = true;
+  startButton.disabled = false;
   drawSnake();
   updateScore();
   createRandomFood();
@@ -179,8 +179,9 @@ const startGame = () => {
 startButton.addEventListener("click", () => {
   if (startButton.textContent === "Start") {
     startGame();
+    startButton.disabled = false;
     startButton.textContent = "Pause"; // Cambia la etiqueta a "Pause" cuando el juego comienza
-    startButton.disabled = false; // Habilita el botón de "Pause" después de iniciar el juego
+    // Habilita el botón de "Pause" después de iniciar el juego
     console.log("start...");
   } else if (startButton.textContent === "Pause") {
     clearInterval(moveInterval);
